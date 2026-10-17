@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/data.json", "destination": "https://sojw.github.io/seoul-apt-dashboard/data.json" },
+    { "source": "/details.json", "destination": "https://sojw.github.io/seoul-apt-dashboard/details.json" },
+    { "source": "/trades/:file", "destination": "https://sojw.github.io/seoul-apt-dashboard/trades/:file" },
+    { "source": "/hist/:file", "destination": "https://sojw.github.io/seoul-apt-dashboard/hist/:file" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
+  ]
+}
